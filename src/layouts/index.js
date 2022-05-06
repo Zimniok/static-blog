@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import Header from "../components/Header"
-import "./index.css"
+import Header from "../components/Header/index"
+// import "./index.css"
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
@@ -21,7 +21,7 @@ const TemplateWrapper = ({ children }) => (
         paddingTop: 0,
       }}
     >
-      {children()}
+      {children}
     </div>
   </div>
 )

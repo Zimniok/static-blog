@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import Link from "gatsby-link"
 import { graphql } from 'gatsby'
-import "./index.css"
+import TemplateWrapper from '../layouts/index'
+import "./index.css" 
 const IndexPage = ({ data }) => {
+
   console.log(data)
   return (
-    <div>
+    <TemplateWrapper>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id} className="article-box">
           <Link
@@ -23,10 +25,11 @@ const IndexPage = ({ data }) => {
           <p className="excerpt">{node.excerpt}</p>
         </div>
       ))}
-    </div>
+    </TemplateWrapper>
   )
 }
 export default IndexPage
+
 export const query = graphql`
   query HomePageQuery {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

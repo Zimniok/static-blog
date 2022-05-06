@@ -2,6 +2,7 @@
 title: "What is Markdown"
 date: "2020-08-01"
 author: "John Gruber"
+img: ../images/example.png
 ---
 
 ## What is Markdown
